@@ -5,3 +5,6 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html', {})
+
+def addContact(request):
+    return render(request, 'addContact.html', {})
