@@ -8,7 +8,7 @@
     <button type="button" class="btn btn-success m-2 p-2"><a href="{% url 'addContact' %}" style="color: white; text-decoration: none;">Create a New Contact</a></button>
 </div>
 <div style="display: flex; justify-content: center;">
-    <table class="table m-3">
+    <table class="table m-3" style="text-align: center;">
         <thead>
           <tr>
             <th scope="col" colspan="2" style="text-align: center;">Actions</th>
@@ -21,21 +21,21 @@
           <tr>
             <th scope="row"><a href="#"><i class="fa-solid fa-user-pen btn"></i></a></th>
             <th scope="row"><a href="#"><i class="fa-solid fa-trash btn"></i></a></th>
-            <td>Mark</td>
+            <td><a href="{% url 'details' %}" style="text-decoration: none;">Mark</a></td>
             <td>mark@gmail.com</td>
             <td>Oct.12, 2023, 4:52 p.m.</td>
           </tr>
           <tr>
             <th scope="row"><a href="#"><i class="fa-solid fa-user-pen btn"></i></a></th>
             <th scope="row"><a href="#"><i class="fa-solid fa-trash btn"></i></a></th>
-            <td>Jacob</td>
+            <td><a href="{% url 'details' %}" style="text-decoration: none;">Jacob</a></td>
             <td>jacob@hotmail.com</td>
             <td>Oct.12, 2023, 4:52 p.m.</td>
           </tr>
           <tr>
             <th scope="row"><a href="#"><i class="fa-solid fa-user-pen btn"></i></a></th>
             <th scope="row"><a href="#"><i class="fa-solid fa-trash btn"></i></a></th>
-            <td>Larry</td>
+            <td><a href="{% url 'details' %}" style="text-decoration: none;">Larry</a></td>
             <td>larry@outlook.com</td>
             <td>Oct.12, 2023, 4:52 p.m.</td>
           </tr>
