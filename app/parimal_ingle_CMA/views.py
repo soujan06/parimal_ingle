@@ -11,3 +11,6 @@ def addContact(request):
 
 def details(request):
     return render(request, 'details.html', {})
+
+def update(request):
+    return render(request, 'update.html', {})
