@@ -7,4 +7,5 @@ urlpatterns = [
     path('addContact', views.addContact, name='addContact'),
     path('details', views.details, name='details'),
     path('update', views.update, name='update'),
+    path('deleteConf', views.deleteConf, name='deleteConf'),
 ]

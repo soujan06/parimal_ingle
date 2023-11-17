@@ -14,3 +14,6 @@ def details(request):
 
 def update(request):
     return render(request, 'update.html', {})
+
+def deleteConf(request):
+    return render(request, 'deleteConf.html', {})
