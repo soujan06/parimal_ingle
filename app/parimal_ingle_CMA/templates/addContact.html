@@ -1,24 +1,28 @@
 {% extends 'base.html' %}
 
+
 {% block title %} CMA | Create Contact {% endblock %}
 
 {% block content %}
 <div class="container">
     <h1 style="text-align: center; color: blue;" class="m-5">Create a Contact</h1>
-    <form action="">
+    <form method="POST">
+      {% csrf_token %}
         <div class="mb-3">
-            <label for="fullName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="fullName" name="fullName">
+            <label for="contact_name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="contact_name" name="contact_name" required>
         </div>
         <div class="mb-3">
-          <label for="email1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email1" name="email1" aria-describedby="emailHelp">
+          <label for="contact_email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="contact_email" name="contact_email" aria-describedby="emailHelp" required>
           <div id="emailHelp" class="form-text"></div>
         </div>
-        <div>
-            <label for="notes" class="form-label">Notes</label>
-            <textarea name="notes" id="notes" cols="50" rows="5"></textarea>
+        <div class="mb-3">
+            <label for="contact_notes" class="form-label">Notes</label>
+            <input type="text" class="form-control" id="contact_notes" name="contact_notes" required>
         </div>
+        <p>{% now 'M. d, Y H:m' %}</p>
+        <input type="datetime" name="datetime" id="datetime" value="" hidden>
         <button type="submit" class="btn btn-success">Submit</button>
         <a href="{% url 'home' %}" type="button" class="btn btn-primary">Cancel</a>
       </form>
