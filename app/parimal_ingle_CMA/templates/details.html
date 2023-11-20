@@ -4,14 +4,18 @@
 
 {% block content %}
 <h1 style="text-align: center; color: blue;" class="m-5">{% block header %}Contact Details{% endblock %}</h1>
-<h3>Name: <p> </p></h3>
-<h3>E-mail: <p> </p></h3>
-<h3>Notes: <p> </p></h3>
-<h3>Created Time: </h3>
-<div>
-    <a class="btn btn-primary" href="{% url 'home' %}">Home</a>
-    <a class="btn btn-warning" href="{% url 'update' %}">Edit</a>
-    <a class="btn btn-danger" href="{% url 'deleteConf' %}">Delete</a>
+<div style="display: flex; justify-content: center;">
+    <div style="display: grid; grid-template-columns: 50% 50%;">
+        <h3>Name: </h3> <h5>{{ curr_contact.contact_name }}</h5>
+        <h3>E-mail: </h3> <h5>{{ curr_contact.contact_email }}</h5>
+        <h3>Notes: </h3> <h5>{{ curr_contact.contact_notes }}</h5>
+        <h3>Created Time: </h3> <h5>{{ curr_contact.created_time }}</h5>
+    </div>
+</div>
+<div style="display: flex; justify-content: center;">
+    <a class="btn btn-primary m-2" href="{% url 'home' %}">Home</a>
+    <a class="btn btn-warning m-2" href="{% url 'update' curr_contact.id %}">Edit</a>
+    <a class="btn btn-danger m-2" href="{% url 'deleteConf' curr_contact.id %}">Delete</a>
 </div>
 
 

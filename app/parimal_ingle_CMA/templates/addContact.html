@@ -6,6 +6,16 @@
 {% block content %}
 <div class="container">
     <h1 style="text-align: center; color: blue;" class="m-5">Create a Contact</h1>
+   
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    {% endif %}
+   
     <form method="POST">
       {% csrf_token %}
         <div class="mb-3">
@@ -19,11 +29,11 @@
         </div>
         <div class="mb-3">
             <label for="contact_notes" class="form-label">Notes</label>
-            <input type="text" class="form-control" id="contact_notes" name="contact_notes" required>
+            <input type="text" class="form-control"  id="contact_notes" name="contact_notes" minlength="1" required>
         </div>
-        <p>{% now 'M. d, Y H:m' %}</p>
-        <input type="datetime" name="datetime" id="datetime" value="" hidden>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <!-- <p>{% now 'M. d, Y H:m' %}</p> -->
+        <input type="text" name="created_time" id="created_time" value="{{ created_time }}" hidden>
+        <button type="submit" class="btn btn-success">Create Contact</button>
         <a href="{% url 'home' %}" type="button" class="btn btn-primary">Cancel</a>
       </form>
 </div>
