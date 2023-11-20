@@ -1,5 +1,28 @@
 {% extends 'base.html' %}
 {% block title %} CMA | About {% endblock %}
 {% block content %}
-<h1>About Page</h1>
+{% load static %}
+<div style="display: flex; justify-content: center;">
+    <div class="card m-5" style="width: 25%;">
+        <img src="{% static 'images/profile_pic.jpeg' %}" class="card-img-top" alt="profile pic">
+        <div class="card-body">
+            <h1>About Me</h1>
+            <h3 class="card-title">Parimal Ingle</h3>
+            <h5 class="card-text">MSIS Student | Fall 2023</h5>
+            <h5 class="card-text">California State University, Long Beach</h5>
+            <h5 class="card-text">Student Id: 032253934</h5>
+            <a href="https://parimalingle1805.github.io/personal-portfolio-react/" target="_blank" class="btn btn-primary">Go to My Portfolio</a>
+        </div>
+    </div>
+    <div class="card m-5" style="width: 25%;">
+        <img src="{% static 'images/cm_about1.jpg' %}" class="card-img-top" alt="profile pic">
+        <div class="card-body">
+            <h1>About Project</h1>
+            <h3 class="card-title">Contact Management App</h3>
+            <h5 class="card-text">IS 640 Programming for Business analytics</h5>
+            <h5 class="card-text">Made using python, SQLite3 and Django framework to demonstrate CRUD operations</h5>
+            <a href="https://github.com/parimalingle1805/parimal_ingle" class="btn btn-primary">Go to Github Repository</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
