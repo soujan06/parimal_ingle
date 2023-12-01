@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<h1 style="text-align: center; color: blue;" class="mb-5">Confirm Delete</h1>
+<h1 style="text-align: center; color: black;" class="mb-5">Confirm Delete</h1>
 {% if messages %}
   {% for message in messages %}
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -13,10 +13,10 @@
   </div>
   {% endfor %}
 {% endif %}
-<h5 style="text-align: center;" class="mb-2">Are you sureyou want to delete contact {{ curr_contact.contact_name }}?</h5>
-<div style="display: flex; justify-content: center;">
+<h5 style="text-align: left;" class="mb-2">Are you sure you want to delete contact {{ curr_contact.contact_name }}?</h5>
+<div style="display: flex; justify-content: left;">
     <a href="{% url 'delete' curr_contact.id %}" class="btn btn-danger m-2">Delete</a>
-    <a href="{% url 'home' %}" class="btn btn-primary m-2">Home</a>
+    <a href="{% url 'home' %}" class="btn m-2" style="border: 2px solid black;" >Home</a>
 </div>
 
 {% endblock %}
