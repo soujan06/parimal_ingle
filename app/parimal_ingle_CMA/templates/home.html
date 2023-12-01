@@ -3,9 +3,9 @@
 {% block title %} CMA | Home {% endblock %}
 
 {% block content %}
-<h1 style="text-align: center; color: blue;">Contact Management</h1>
-<div style="display: flex; justify-content: center;">
-    <a href="{% url 'addContact' %}" type="button" style="color: white; text-decoration: none;" class="btn btn-success m-2 p-2">Create a New Contact</a>
+<h1 style="text-align: center; color: black">Contact Management</h1>
+<div style="display: flex; justify-content: left;">
+    <a href="{% url 'addContact' %}" type="button" style="color: white; text-decoration: none; background-color: #167D7F;" class="btn m-2 p-2">Create a New Contact</a>
 </div>
 {% if messages %}
   {% for message in messages %}

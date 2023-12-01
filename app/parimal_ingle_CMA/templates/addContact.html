@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="container">
-    <h1 style="text-align: center; color: blue;" class="m-5">Create a Contact</h1>
+    <h1 style="text-align: center; color: black;" class="m-5">Create a Contact</h1>
    
     {% if messages %}
       {% for message in messages %}
@@ -33,8 +33,8 @@
         </div>
         <!-- <p>{% now 'M. d, Y H:m' %}</p> -->
         <input type="text" name="created_time" id="created_time" value="{{ created_time }}" hidden>
-        <button type="submit" class="btn btn-success">Create Contact</button>
-        <a href="{% url 'home' %}" type="button" class="btn btn-primary">Cancel</a>
+        <button type="submit" class="btn m-2" style="background-color: #167D7F; color: white;">Create Contact</button>
+        <a href="{% url 'home' %}" class="btn m-2" style="border: 2px solid black;" >Cancel</a>
       </form>
 </div>
 
