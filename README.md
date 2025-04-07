@@ -1,4 +1,4 @@
-# parimal_ingle
+# Soujan Wuluvrna 
 For running the app in your local PC please follow the following instructions.
 i. Clone repository into your local system.
 ii. Open terminal and command 'cd' into 'app' directory
